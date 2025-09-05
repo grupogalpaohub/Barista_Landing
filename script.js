@@ -30,15 +30,21 @@
   const panels = $$('.panel');
   const flyout = $('.agenda-flyout');
   const getPanelById = (id) => $('#' + id);
-  let openId = 'panel-bv';
-  const renderFlyout = (panel) => {
-    if (!flyout || !panel) return;
+  let openId = '';
+  const renderFlyout = (panel, anchorBtn) => {
+    if (!flyout || !panel || !anchorBtn) return;
     flyout.hidden = false;
     flyout.innerHTML = '<div class="fly-panel">' + panel.innerHTML + '</div>';
+    // Position flyout next to button
+    const btnRect = anchorBtn.getBoundingClientRect();
+    const containerRect = agenda.getBoundingClientRect();
+    const top = btnRect.top - containerRect.top + agenda.scrollTop;
+    const left = btnRect.left - containerRect.left + agenda.scrollLeft + anchorBtn.offsetWidth + 10;
+    flyout.style.top = top + 'px';
+    flyout.style.left = left + 'px';
+    flyout.style.maxWidth = 'min(420px, 80vw)';
   };
   if (agenda) {
-    // initial render
-    renderFlyout(getPanelById(openId));
     agenda.addEventListener('click', (e) => {
       const btn = e.target.closest('.tab');
       if (!btn) return;
@@ -53,7 +59,13 @@
       }
       openId = id;
       $$('.tab', agenda).forEach(t => t.setAttribute('aria-selected', String(t === btn)));
-      renderFlyout(getPanelById(id));
+      renderFlyout(getPanelById(id), btn);
+    });
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!flyout || flyout.hidden) return;
+      if (e.target.closest('.agenda') || e.target.closest('.agenda-flyout')) return;
+      flyout.hidden = true; openId = ''; $$('.tab', agenda).forEach(t => t.setAttribute('aria-selected', 'false'));
     });
   }
 
