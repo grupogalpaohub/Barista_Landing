@@ -162,8 +162,8 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .site-footer { border-top: 1px solid rgba(0,0,0,.06); padding: 20px 0 96px; position: relative; }
 .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .socials { display: flex; align-items: center; gap: 10px; }
-.ig-btn { gap: 8px; font-weight: 600; }
-.ig-btn img { width: 18px; height: 18px; display: block; }
+.icon-btn { padding: 8px; border-radius: 12px; }
+.icon-btn img { width: 20px; height: 20px; display: block; }
 .ig { color: var(--muted); }
 .legal { display: flex; gap: 12px; color: var(--muted); font-size: 14px; }
 
