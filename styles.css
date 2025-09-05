@@ -124,6 +124,7 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .panels { display: none !important; }
 .panel { background: var(--white); border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); border-left: 4px solid var(--surface); }
 .panel .sublabel { color: var(--muted); margin-top: -2px; }
+.agenda { position: relative; }
 .agenda-flyout { position: absolute; z-index: 5; }
 .agenda-flyout[hidden] { display: none; }
 @media (min-width: 900px) {

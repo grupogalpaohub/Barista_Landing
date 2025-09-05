@@ -44,18 +44,18 @@
       let topPx = 0; let leftPx = 0;
       if (isDesktop) {
         // Prefer left of the button
-        leftPx = btnRect.left - containerRect.left - flyRect.width - 12;
+        leftPx = (btnRect.left - containerRect.left) - flyRect.width - 12;
         if (leftPx < 0) {
           // Fallback to right if overflow
-          leftPx = btnRect.right - containerRect.left + 12;
+          leftPx = (btnRect.right - containerRect.left) + 12;
         }
         // Align vertically centered to the button
-        topPx = btnRect.top - containerRect.top + (btnRect.height - flyRect.height) / 2;
+        topPx = (btnRect.top - containerRect.top) + (btnRect.height - flyRect.height) / 2;
         if (topPx < 0) topPx = 0;
       } else {
         // Mobile: open below the button
-        leftPx = btnRect.left - containerRect.left;
-        topPx = btnRect.bottom - containerRect.top + 8;
+        leftPx = 8;
+        topPx = (btnRect.bottom - containerRect.top) + 8;
         flyout.style.width = 'calc(100% - 16px)';
       }
       flyout.style.top = topPx + 'px';
