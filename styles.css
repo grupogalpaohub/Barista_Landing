@@ -134,7 +134,7 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 }
 .agenda-flyout .fly-panel { min-width: 240px; max-width: 420px; background: var(--white); border: 1px solid rgba(0,0,0,.08); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); animation: slideIn .22s ease; }
 @keyframes slideIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-@media (min-width: 900px) { .agenda { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .agenda { grid-template-columns: repeat(3, minmax(0, 1fr)); } .event-meta { margin-top: 14px; } }
 @media (prefers-reduced-motion: reduce) { .tab, .tab:hover { transition: none; transform: none; } }
 
 .event-meta p { margin: 0 0 6px; color: var(--muted); }
