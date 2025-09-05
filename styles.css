@@ -124,6 +124,16 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .panels { margin-top: 12px; display: grid; gap: 10px; }
 .panel { background: var(--white); border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); border-left: 4px solid var(--surface); }
 .panel .sublabel { color: var(--muted); margin-top: -2px; }
+/* Flyout beside grid */
+.agenda-flyout { position: relative; margin-top: 10px; }
+.agenda-flyout[hidden] { display: none; }
+@media (min-width: 900px) {
+  .format .container { display: grid; grid-template-columns: 1fr; }
+  .agenda { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .agenda-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+.agenda-flyout .fly-panel { background: var(--white); border: 1px solid rgba(0,0,0,.08); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); animation: slideIn .25s ease; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
 @media (min-width: 900px) { .agenda { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .tab, .tab:hover { transition: none; transform: none; } }
 
