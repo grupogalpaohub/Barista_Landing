@@ -207,13 +207,69 @@
             <span class="chip">EM GRUPO (4 pessoas)</span>
             <span class="chip">6 horas de treino</span>
           </div>
-          <div class="timeline">
-            <div class="t-item">Boas-vindas</div>
-            <div class="t-item">Espresso</div>
-            <div class="t-item">Leite</div>
-            <div class="t-item">Latte Art</div>
-            <div class="t-item">Fluxo de balcão</div>
-            <div class="t-item">Check de competências</div>
+          <div class="agenda" role="tablist" aria-label="Agenda do dia">
+            <button class="tab" role="tab" aria-selected="true" aria-controls="panel-bv" id="tab-bv">
+              <img src="/bv.png" alt="" aria-hidden="true" />
+              <span>Boas-vindas</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-espresso" id="tab-espresso">
+              <img src="/espresso.png" alt="" aria-hidden="true" />
+              <span>Espresso</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-leite" id="tab-leite">
+              <img src="/leite.png" alt="" aria-hidden="true" />
+              <span>Leite</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-la" id="tab-la">
+              <img src="/la.png" alt="" aria-hidden="true" />
+              <span>Latte Art</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-fdb" id="tab-fdb">
+              <img src="/fdb.png" alt="" aria-hidden="true" />
+              <span>Fluxo de balcão</span>
+            </button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-cdc" id="tab-cdc">
+              <img src="/cdc.png" alt="" aria-hidden="true" />
+              <span>Check de competências</span>
+            </button>
+          </div>
+          <div class="panels">
+            <section id="panel-bv" class="panel" role="tabpanel" aria-labelledby="tab-bv">
+              <h3>Boas-vindas</h3>
+              <p class="sublabel">alinhamento, setup e segurança</p>
+              <p class="short">Objetivos do dia, apresentação do método (Mapa 1:2 + Pitcher Code™), mise-en-place da estação e higiene rápida.</p>
+              <p class="outcome">Você sai com: rubrica na mão e estação pronta pra praticar.</p>
+            </section>
+            <section id="panel-espresso" class="panel" role="tabpanel" aria-labelledby="tab-espresso" hidden>
+              <h3>Espresso</h3>
+              <p class="sublabel">1:2 em 25–30s, sem adivinhação</p>
+              <p class="short">Dial-in guiado (dose, rendimento, tempo), distribuição/compactação, leitura de fluxo/crema e correções ao vivo para sub/super extração.</p>
+              <p class="outcome">Você sai com: 2 shots seguidos dentro da janela 25–30s.</p>
+            </section>
+            <section id="panel-leite" class="panel" role="tabpanel" aria-labelledby="tab-leite" hidden>
+              <h3>Leite</h3>
+              <p class="sublabel">microespuma previsível, toda vez</p>
+              <p class="short">Pitcher Code™ (stretch → whirlpool → servir), volumes e temperatura, 5 exercícios para tirar bolhas e ganhar textura sedosa.</p>
+              <p class="outcome">Você sai com: leite brilhante e estável, pronto pro desenho.</p>
+            </section>
+            <section id="panel-la" class="panel" role="tabpanel" aria-labelledby="tab-la" hidden>
+              <h3>Latte Art</h3>
+              <p class="sublabel">seu primeiro coração limpo</p>
+              <p class="short">controle de altura e fluxo, ângulo da xícara, entrada/fechamento do desenho e drills de precisão.</p>
+              <p class="outcome">Você sai com: um coração simétrico fotografável.</p>
+            </section>
+            <section id="panel-fdb" class="panel" role="tabpanel" aria-labelledby="tab-fdb" hidden>
+              <h3>Fluxo de balcão</h3>
+              <p class="sublabel">padrão + velocidade no pico</p>
+              <p class="short">ordem de preparo (quente/gelado), fila de shots, pitchers, comunicação com caixa/cozinha e redução de tempo morto.</p>
+              <p class="outcome">Você sai com: um mini-roteiro para atender mais rápido sem perder qualidade.</p>
+            </section>
+            <section id="panel-cdc" class="panel" role="tabpanel" aria-labelledby="tab-cdc" hidden>
+              <h3>Check de competências</h3>
+              <p class="sublabel">validação e próximos passos</p>
+              <p class="short">aplicação da Rubrica Shift-Ready (espresso 1:2, leite, coração, higiene/estação) + feedback individual, certificado e plano de prática.</p>
+              <p class="outcome">Você sai com: aprovação registrada — e, se não bater os 2 resultados, “Fez ou Repete” na próxima turma.</p>
+            </section>
           </div>
           <div class="event-meta">
             <p><strong>Data:</strong> 01/11/2025</p>

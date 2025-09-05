@@ -25,6 +25,23 @@
     next?.addEventListener('click', () => track.scrollBy({ left: cardWidth(), behavior: 'smooth' }));
   }
 
+  // Agenda tabs (accessible)
+  const agenda = $('.agenda');
+  const panels = $$('.panel');
+  if (agenda) {
+    agenda.addEventListener('click', (e) => {
+      const btn = e.target.closest('.tab');
+      if (!btn) return;
+      const id = btn.getAttribute('aria-controls');
+      // update selected
+      $$('.tab', agenda).forEach(t => t.setAttribute('aria-selected', String(t === btn))); 
+      // toggle panels
+      panels.forEach(p => {
+        p.hidden = (p.id !== id);
+      });
+    });
+  }
+
   // Lazy-load: convert PNG/JPG to WebP when supported (progressive enhancement)
   // Note: keep hero eager. Others are lazy by HTML attribute already.
 
