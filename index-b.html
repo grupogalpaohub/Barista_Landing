@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/styles-b.css" />
   </head>
   <body class="b">
@@ -16,6 +17,19 @@
         <a href="#topo" class="brand" aria-label="Ir para o topo">
           <img src="/Logo_academy.png" alt="Latte Art Academy by Ronnie." width="50" height="50" loading="eager" />
         </a>
+        <nav class="main-nav" aria-label="Menu principal">
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#formato">Agenda</a></li>
+            <li><a href="#incluso">Incluso &amp; Bônus</a></li>
+            <li><a href="#instrutor">Instrutor</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#checkout" class="btn btn-primary">Comprar Agora</a></li>
+          </ul>
+        </nav>
         <a href="#checkout" class="btn btn-primary cta-sticky">Reservar em Grupo</a>
       </div>
     </header>
@@ -44,9 +58,47 @@
         </div>
       </section>
 
-      <section class="restante">
+      <!-- Prova rápida -->
+      <section id="sobre" class="proof-mini" aria-label="Prova rápida">
+        <div class="container grid-3">
+          <figure class="card fade-in">
+            <img src="/Expresso.png" alt="Close do espresso extraindo com crema e fluxo uniforme." loading="lazy" width="640" height="640" />
+            <figcaption>Padrão de extração 1:2, crema consistente.</figcaption>
+          </figure>
+          <figure class="card fade-in">
+            <img src="/Milk.png" alt="Mãos vaporizando leite em pitcher, vapor visível." loading="lazy" width="640" height="640" />
+            <figcaption>Microespuma sedosa, textura e temperatura corretas.</figcaption>
+          </figure>
+          <figure class="card fade-in">
+            <img src="/turma_fechada.png" alt="Turma pequena, prática guiada em estação." loading="lazy" width="640" height="640" />
+            <figcaption>Turma fechada, apenas 4 pessoas.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Resultados -->
+      <section id="resultados" class="results" aria-label="Resultados práticos">
         <div class="container">
-          <p>[Resto da página igual à versão A — reutilize se desejar]</p>
+          <h2>Resultados no mesmo dia</h2>
+          <ul class="bullets">
+            <li>Espresso 1:2 (25–30s) com correções padrão (moagem/dose/rendimento)</li>
+            <li>Microespuma sedosa (textura/temperatura corretas)</li>
+            <li>Latte Art básico: <strong>coração limpo</strong> e simétrico</li>
+            <li>Setup de estação &amp; fluxo de pico (menos tempo morto)</li>
+            <li>Qualidade sensorial express (ver/cheirar/provar)</li>
+            <li>Higiene 15’/15’ que muda o sabor</li>
+          </ul>
+
+          <div class="compare">
+            <figure>
+              <img src="/latte_antes.png" alt="Latte art antes do treinamento (desenho irregular)." loading="lazy" width="640" height="640" />
+              <figcaption>Antes</figcaption>
+            </figure>
+            <figure>
+              <img src="/latte_Depois.png" alt="Latte art após o Boot Camp (coração limpo e simétrico)." loading="lazy" width="640" height="640" />
+              <figcaption>Depois</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </main>
