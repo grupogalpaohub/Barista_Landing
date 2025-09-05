@@ -35,14 +35,34 @@
     if (!flyout || !panel || !anchorBtn) return;
     flyout.hidden = false;
     flyout.innerHTML = '<div class="fly-panel">' + panel.innerHTML + '</div>';
-    // Position flyout next to button
-    const btnRect = anchorBtn.getBoundingClientRect();
-    const containerRect = agenda.getBoundingClientRect();
-    const top = btnRect.top - containerRect.top + agenda.scrollTop;
-    const left = btnRect.left - containerRect.left + agenda.scrollLeft + anchorBtn.offsetWidth + 10;
-    flyout.style.top = top + 'px';
-    flyout.style.left = left + 'px';
-    flyout.style.maxWidth = 'min(420px, 80vw)';
+    // Position calculation after DOM paint to measure
+    requestAnimationFrame(() => {
+      const isDesktop = window.matchMedia('(min-width: 900px)').matches;
+      const btnRect = anchorBtn.getBoundingClientRect();
+      const containerRect = agenda.getBoundingClientRect();
+      const flyRect = flyout.getBoundingClientRect();
+      let topPx = 0; let leftPx = 0;
+      if (isDesktop) {
+        // Prefer left of the button
+        leftPx = btnRect.left - containerRect.left - flyRect.width - 12;
+        if (leftPx < 0) {
+          // Fallback to right if overflow
+          leftPx = btnRect.right - containerRect.left + 12;
+        }
+        // Align vertically centered to the button
+        topPx = btnRect.top - containerRect.top + (btnRect.height - flyRect.height) / 2;
+        if (topPx < 0) topPx = 0;
+      } else {
+        // Mobile: open below the button
+        leftPx = btnRect.left - containerRect.left;
+        topPx = btnRect.bottom - containerRect.top + 8;
+        flyout.style.width = 'calc(100% - 16px)';
+      }
+      flyout.style.top = topPx + 'px';
+      flyout.style.left = leftPx + 'px';
+      flyout.style.maxWidth = 'min(420px, 90vw)';
+      flyout.style.zIndex = '10';
+    });
   };
   if (agenda) {
     agenda.addEventListener('click', (e) => {
