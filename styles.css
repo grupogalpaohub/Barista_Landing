@@ -178,8 +178,8 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .faq details + details { margin-top: 10px; }
 .faq summary { cursor: pointer; font-weight: 600; }
 
-.contact address { font-style: normal; color: var(--muted); margin-bottom: 12px; }
-.contact .cta-row { gap: 10px; }
+.contact address { font-style: normal; color: var(--muted); margin-bottom: 12px; margin-top: 12px; }
+.contact .cta-row { gap: 10px; justify-content: flex-start; }
 
 .site-footer { border-top: 1px solid rgba(0,0,0,.06); padding: 20px 0 96px; position: relative; }
 .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
