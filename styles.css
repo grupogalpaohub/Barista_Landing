@@ -164,6 +164,11 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .socials { display: flex; align-items: center; gap: 10px; }
 .icon-btn { padding: 8px; border-radius: 12px; }
 .icon-btn img { width: 20px; height: 20px; display: block; }
+
+@media (max-width: 739px) {
+  .icon-btn { width: 44px; height: 44px; padding: 0; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; }
+  .icon-btn img { width: 24px; height: 24px; object-fit: contain; }
+}
 .ig { color: var(--muted); }
 .legal { display: flex; gap: 12px; color: var(--muted); font-size: 14px; }
 
