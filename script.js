@@ -81,12 +81,24 @@
     banner?.removeAttribute('hidden');
   }
   const setConsent = (val) => {
-    localStorage.setItem(CONSENT_KEY, val);
-    banner?.setAttribute('hidden', '');
+    try { localStorage.setItem(CONSENT_KEY, val); } catch(e) {}
+    if (banner) {
+      banner.setAttribute('hidden', '');
+      banner.style.display = 'none';
+    }
   };
   $$('[data-cookie="accept"]').forEach(b => b.addEventListener('click', () => setConsent('accepted')));
   $$('[data-cookie="reject"]').forEach(b => b.addEventListener('click', () => setConsent('rejected')));
   $$('[data-cookie="prefs"]').forEach(b => b.addEventListener('click', () => setConsent('preferences')));
+  // Delegation fallback
+  banner?.addEventListener('click', (e) => {
+    const t = e.target.closest('[data-cookie]');
+    if (!t) return;
+    const val = t.getAttribute('data-cookie');
+    if (val === 'reject') setConsent('rejected');
+    else if (val === 'accept') setConsent('accepted');
+    else if (val === 'prefs') setConsent('preferences');
+  });
 
 })();
 
