@@ -9,8 +9,11 @@
 .hero-b{position:relative;min-height:86vh;display:grid;place-items:center;overflow:hidden}
 .kenburns{position:absolute;inset:0;background:url('/Header.png') center/cover no-repeat;transform:scale(1.08);animation:ken 14s ease-in-out infinite alternate;filter:brightness(.7) contrast(1.05)}
 @keyframes ken{0%{transform:scale(1.08) translate(0,0)}100%{transform:scale(1.18) translate(-2%, -2%)}}
-.steam{position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 20% at 50% 60%, rgba(255,255,255,.12), transparent 60%),radial-gradient(50% 18% at 48% 70%, rgba(255,255,255,.10), transparent 60%),radial-gradient(40% 14% at 52% 80%, rgba(255,255,255,.08), transparent 60%);animation:rise 8s linear infinite}
-@keyframes rise{0%{filter:blur(16px) opacity(.5)}50%{filter:blur(18px) opacity(.7)}100%{filter:blur(16px) opacity(.5)}}
+.steam{position:absolute;left:0;right:0;bottom:0;top:30%;pointer-events:none;overflow:visible;mask-image:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,1) 28%, rgba(0,0,0,1) 100%);-webkit-mask-image:linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,1) 28%, rgba(0,0,0,1) 100%)}
+.steam::before{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:min(40vw, 320px);height:90px;background:radial-gradient(50% 60% at 50% 100%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 70%);filter:blur(6px);opacity:.7}
+.puff{position:absolute;left:50%;bottom:0;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 50% 60%, rgba(255,255,255,.35) 0%, rgba(255,255,255,.22) 35%, rgba(255,255,255,.06) 70%, rgba(255,255,255,0) 80%);filter:blur(8px);opacity:.0;transform:translate(-50%,0) scale(.7);animation:puffUp var(--dur,6s) ease-out forwards;will-change:transform,opacity,filter}
+@keyframes puffUp{0%{opacity:.0;transform:translate(-50%, 0) scale(.7)}8%{opacity:.5}50%{opacity:.35}100%{opacity:0;transform:translate(calc(-50% + var(--dx, 0px)), -280px) scale(1.4)}}
+@media (prefers-reduced-motion: reduce){.puff{animation-duration:0.01ms;animation-iteration-count:1}}
 .hero-b-inner{position:relative;text-align:center;display:grid;gap:10px}
 .hero-logo{width:clamp(160px,22vw,280px);height:auto;margin:0 auto 8px}
 .hero-b h1{font-family:'Outfit',system-ui,sans-serif;font-weight:700;font-size:clamp(28px,5vw,46px);margin:0}
