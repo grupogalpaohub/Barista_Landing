@@ -67,7 +67,7 @@ a { color: inherit; text-decoration: none; }
 .cta-sticky { position: fixed; right: 16px; bottom: 16px; box-shadow: var(--shadow); display: inline-flex; }
 
 .hero { position: relative; min-height: 72vh; display: grid; place-items: center; color: var(--white); }
-.hero-media { position: absolute; inset: 0; background: url('/Header.jpg') center/cover no-repeat; opacity: 0.5; z-index: 0; }
+.hero-media { position: absolute; inset: 0; background: url('/Header.png') center/cover no-repeat; opacity: 0.5; z-index: 0; }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.55)); z-index: 0; }
 .hero-inner { position: relative; z-index: 1; padding: 80px 0 64px; text-align: center; }
 .hero-logo { width: clamp(134px, 25.2vw, 224px); height: auto; margin: 0 auto 14px; display: block; }
