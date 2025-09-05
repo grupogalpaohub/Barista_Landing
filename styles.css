@@ -67,14 +67,15 @@ a { color: inherit; text-decoration: none; }
 .cta-sticky { position: fixed; right: 16px; bottom: 16px; box-shadow: var(--shadow); display: inline-flex; }
 
 .hero { position: relative; min-height: 72vh; display: grid; place-items: center; color: var(--white); }
-.hero-media { position: absolute; inset: 0; background: url('/Header.jpg') center/cover no-repeat; opacity: 0.75; z-index: 0; }
-.hero::after { content: ""; position: absolute; inset: 0; background: transparent; z-index: 0; }
+.hero-media { position: absolute; inset: 0; background: url('/Header.jpg') center/cover no-repeat; opacity: 0.5; z-index: 0; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.55)); z-index: 0; }
 .hero-inner { position: relative; z-index: 1; padding: 80px 0 64px; text-align: center; }
 .hero-logo { width: clamp(134px, 25.2vw, 224px); height: auto; margin: 0 auto 14px; display: block; }
 .hero h1 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em; font-size: clamp(28px, 5vw, 42px); margin: 0 0 12px; }
 .sub { font-size: clamp(16px, 3.6vw, 20px); margin: 0 auto 16px; max-width: 700px; color: #F6EDE3; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 10px 0 16px; }
 .chip { background: rgba(249, 201, 140, 0.2); color: #FCE3C2; border: 1px solid rgba(255,255,255,.25); padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+.hero .chip { color: var(--primary); border-color: rgba(0,0,0,.0); }
 .format .chip { color: var(--primary); }
 .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
@@ -95,6 +96,7 @@ h3 { font-family: 'Outfit', system-ui, sans-serif; font-weight: 600; font-size: 
 .card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .card img { aspect-ratio: 1/1; object-fit: cover; }
 .card figcaption { padding: 10px 12px; font-size: 14px; color: var(--charcoal); }
+.proof-mini .card figcaption { text-align: center; }
 
 .bullets { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 10px; }
 .bullets li { background: var(--white); border: 1px solid rgba(0,0,0,.06); border-radius: var(--radius-sm); padding: 12px 14px; box-shadow: var(--shadow); }
