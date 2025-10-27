@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Imersão Fundamentos do Latte — Versão C</title>
+    <meta name="description" content="Versão C: página de conversão extrema para baristas shift-ready. Espresso 1:2 + coração limpo em 1 dia." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles-c.css" />
+  </head>
+  <body class="c">
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#topo" class="brand" aria-label="Ir para o topo">
+          <img src="/Logo_academy.png" alt="Latte Art Academy by Ronnie." width="56" height="56" loading="eager" />
+        </a>
+        <nav class="main-nav" aria-label="Menu principal">
+          <ul>
+            <li><a href="#prova">Prova</a></li>
+            <li><a href="#roi">ROI</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#instrutor">Instrutor</a></li>
+            <li><a href="#checkout" class="btn btn-primary">Reservar</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="value-bar" role="region" aria-label="Valor e vagas">
+        <div class="container value-inner">
+          <div class="ticker" aria-live="polite">
+            <span>Garantia Fez ou Repete</span>
+            <span>Turma fechada (4 pessoas)</span>
+            <span>Shift-ready em 1 dia</span>
+            <span>Invoice para empresas</span>
+          </div>
+          <div class="spots">Vagas: <strong id="spots">4</strong>/4</div>
+        </div>
+      </div>
+    </header>
+
+    <main id="topo">
+      <!-- HERO cinematográfico -->
+      <section class="hero-c" aria-label="Hero Versão C">
+        <video class="bg" autoplay muted playsinline loop poster="/Header.png">
+          <source src="" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+        <div class="container hero-c-inner">
+          <h1>Imersão Fundamentos do Latte</h1>
+          <p class="sub">Em 6 horas, você tira seu primeiro coração limpo — e volta pronto pro turno.</p>
+          <div class="pill-row">
+            <span class="pill">Presencial em Dublin</span>
+            <span class="pill">Turma fechada (4)</span>
+            <span class="pill">01/11 • 10:00–17:00</span>
+          </div>
+          <div class="cta-row">
+            <a href="#checkout" class="btn btn-primary btn-lg">Reservar em Grupo</a>
+            <a href="#checkout" class="btn btn-ghost btn-lg">Reservar Solo</a>
+          </div>
+          <div class="trust-mini">SSL • Hotmart • Garantia Fez ou Repete</div>
+        </div>
+      </section>
+
+      <!-- Prova social + A/B -->
+      <section id="prova" class="proof-c">
+        <div class="container">
+          <div class="proof-grid">
+            <figure class="shot">
+              <img src="/Expresso.png" alt="Close do espresso extraindo com crema e fluxo uniforme." loading="lazy" />
+              <figcaption>1:2 em 25–30s, sem adivinhação</figcaption>
+            </figure>
+            <figure class="milk">
+              <img src="/Milk.png" alt="Mãos vaporizando leite em pitcher, vapor visível." loading="lazy" />
+              <figcaption>Microespuma sedosa e brilhante</figcaption>
+            </figure>
+            <div class="ab">
+              <img src="/latte_antes.png" alt="Latte art antes do treinamento (desenho irregular)." />
+              <img src="/latte_Depois.png" alt="Latte art após o Boot Camp (coração limpo e simétrico)." />
+              <div class="labels"><span>Antes</span><span>Depois</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROI rápido (para gestor e barista) -->
+      <section id="roi" class="roi">
+        <div class="container roi-grid">
+          <div class="card"> 
+            <h2>ROI do Gestor</h2>
+            <ul>
+              <li>+20% de velocidade no pico</li>
+              <li>-30% de desperdício (leite/café)</li>
+              <li>+NPS por qualidade consistente</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>ROI do Barista</h2>
+            <ul>
+              <li>Validação: espresso 25–30s + coração limpo</li>
+              <li>Confiança no fluxo de balcão</li>
+              <li>Empregabilidade “shift-ready”</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Método -->
+      <section id="metodo" class="method-c">
+        <div class="container">
+          <h2>Método proprietário</h2>
+          <div class="m-grid">
+            <div class="m-item">
+              <h3>Mapa 1:2</h3>
+              <p>Dial-in guiado: dose, rendimento e tempo. Leitura de fluxo/crema e correções ao vivo.</p>
+            </div>
+            <div class="m-item">
+              <h3>Pitcher Code™</h3>
+              <p>Stretch → whirlpool → servir. Textura sedosa e temperatura correta, previsível.</p>
+            </div>
+            <div class="m-item">
+              <h3>Fluxo de Balcão</h3>
+              <p>Fila de shots e pitchers, comunicação e corte de tempo morto para padrão + velocidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agenda compacta -->
+      <section id="agenda" class="agenda-c">
+        <div class="container">
+          <h2>Agenda</h2>
+          <ol>
+            <li>Boas‑vindas e setup</li>
+            <li>Espresso 1:2</li>
+            <li>Leite e textura</li>
+            <li>Latte Art: coração</li>
+            <li>Fluxo de balcão</li>
+            <li>Check de competências</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Instrutor resumido -->
+      <section id="instrutor" class="instructor-c">
+        <div class="container i-grid">
+          <img class="portrait" src="/ronnie.png" alt="Instrutor Ronnie" />
+          <div class="copy">
+            <h2>Ronnie</h2>
+            <p>Barista e instrutor em Dublin. Campeão regional de Latte Art (2019). Foco: padrão e velocidade.</p>
+            <div class="socials">
+              <a href="https://www.instagram.com/riolattebar/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/Insta_Logo.png" alt="" /></a>
+              <a href="[WHATSAPP_LINK]" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="/whats_logo.png" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preço & Checkout sticky section -->
+      <section id="checkout" class="pricing-c">
+        <div class="container p-grid">
+          <div class="p-box">
+            <div class="pp">Preço por pessoa</div>
+            <div class="value"><span>€</span><strong>400</strong></div>
+          </div>
+          <div class="p-box highlight">
+            <div class="pp">Grupo Fechado: 15% OFF</div>
+            <div class="value"><span>€</span><strong>1.360</strong></div>
+          </div>
+          <div class="cta-col">
+            <a href="[HOTMART_CHECKOUT_URL]" class="btn btn-primary btn-lg">Reservar em Grupo</a>
+            <a href="[HOTMART_CHECKOUT_URL]" class="btn btn-ghost btn-lg">Reservar Solo</a>
+            <p class="b2b">Emitimos invoice. <span class="vat">[VAT_NUMBER]</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="legal">© Latte Art Academy by Ronnie, 2025 • <a href="[LINK_PRIVACIDADE]" target="_blank" rel="noopener">Privacidade</a> • <a href="[LINK_TERMOS]" target="_blank" rel="noopener">Termos</a></div>
+      </div>
+    </footer>
+
+    <script src="/script-c.js" defer></script>
+  </body>
+  </html>
+
